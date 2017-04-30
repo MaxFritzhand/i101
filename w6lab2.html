@@ -1,0 +1,55 @@
+<html>
+<head>
+		<title> Week 6 Lab 2 -- JavaScript Part 1 </title>
+</head>
+<body>
+	<h1>JS1</h1>	
+	<p id="script1"> This is my first JavaScript! </p>
+	<button type="button" onclick="newFunction()">click here</button>
+
+	<h1>JS + CSS </h1>
+	<p id="styleChange1"> JS can change the style of the text too! </p>
+	<button type="button" onclick="styleChange1()">click here</button>
+	
+	<h2>one more time</h2>
+	<p id="styleChange2"> This is another cool style! </p>
+	<button type="button" onclick="styleChange2()">click here</button>
+	
+	<h2>JavaScript Homework</h2>
+	<p id="CCButton"> Wanna hear a joke? </p>
+	<button type="button" onclick="CCButton()">click me to find out!</button>
+	
+	<p id="SCButton">Orange is a cool color. Orange is also a delicious fruit. </p>
+	<button type="button" onclick="SCButton()">click me.</button>
+	
+	
+<script>
+	function newFunction(){
+			document.getElementById("script1").innerHTML = "It worked!"; 
+	}	
+	function styleChange1(){
+			var x = document.getElementById("styleChange1");
+			x.style.fontSize = "25px";
+			x.style.color = "red";
+	}
+	function styleChange2(){
+			var x = document.getElementById("styleChange2");
+			x.style.fontsize = "25px";
+			x.style.color = "red";
+			x.style.backgroundColor = "green";
+	}
+	function CCButton(){
+			document.getElementById("CCButton").innerHTML = "What do you call an alligator in a vest? An investigator!";
+	}
+	function SCButton(){
+			var ty = document.getElementById("SCButton");
+			ty.style.color = "blue";
+			ty.style.backgroundColor = "orange";
+	}
+	
+	
+</script>	
+		
+	
+</body>
+</html>

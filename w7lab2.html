@@ -1,0 +1,46 @@
+<html> 
+	<head>
+		<title> Week 7 Lab 2 </title>
+	</head>
+<body>
+
+<h1> JS 3 </h1>
+<h2> JS Questions </h2>
+<h3>What is the difference between n=1+2 and n="1" +"2"? If you were to display the contents of n, 
+what would be shown on your page for each? </h3>
+<ul><li> n=1+2 is an integer and would display 3. n="1"+"2" is a string and is concatenated. It
+would display 12.</li></ul>
+<h3>What does the += mean/do? What did we use for in our JS function?</h3>
+<ul><li> x+=b is the same thing as x=x+b. It adds the variable x to the right side of the equation.	
+for is a loop type and we used it to get to our maximum number (user input).</li></ul>
+<h3>What two pieces of code/functions/attributes have we used the last few labs to indicate/indentify 
+where our JS changes are going to happen? </h3>
+<ul><li> ID for referencing later. And function 	</li></ul>
+
+
+<p>Please enter a non-negative number: </p>
+<input type="text" id="max_number"/>
+<input type="button" onClick="count_it()" value="Count!"/>
+<br>
+<span id="counter"></span>
+
+	<script>
+ function count_it()
+ {
+ var max_num = document.getElementById("max_number").value;
+ var numbers = "";
+ for(var i=1; i<=max_num;i++){
+		if((i%2)==0){
+			numbers+=String(i)+ "<br>";
+		}
+		else{
+		numbers += String(i) +" ";
+		}
+	}
+	document.getElementById("counter").innerHTML=numbers; 
+ }
+	</script>
+
+
+</body>
+</html>

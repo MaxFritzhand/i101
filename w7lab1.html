@@ -1,0 +1,75 @@
+<html>
+<head>
+	<title>   Week 7 Lab 1 JavaScript 2 </title>
+	
+</title>
+
+<body>
+<h1> JS2 </h1>
+
+
+
+
+
+<img id="myImage" onclick="changeImage()" src=http://pages.iu.edu/~mfritzha/i101/images/bulboff.png" />
+<p> Click the lightbulb to turn it on/off. </p>
+
+<p>Please input a number between 1 and 10:</p>
+<input id="num" type="number"/>
+<button type="button" onclick="checkNumber()">Submit</button>
+<p id="script1"></p>
+
+<img id="myImageBlue" onclick="changeImageBlue()" src=http://pages.iu.edu/~mfritzha/i101/images/bulboff.png" />
+<p> Click the lightbulb to turn it blue or off.  </p>
+
+
+<h2> JavaScript Questions </h2>
+<p></p>
+<h4>When would be an instance where validation is useful in a website</h4>
+<ul><li>To ensure the user does not enter an out of balance variable.</li></ul>
+<h4>What would happen if your HTML code did not have either "bulbon" or "bulboff" as the orginal source for the picture?</h4>
+<ul><li>The light bulb on/off does not display. The image is not loading. When you click the image icon, it disappears temporarly.</li></ul>
+<h4>Try and see what happens if you change the picture to some new image without changing the JS function. Why does it behave this way?</h4>
+<ul><li>Only one image displays and does not allow clicking. It behaves this way, because (image.src.match("bulbon") is looking for "bulbon" in the image,
+and the file does not contain that, so it will not run the if statement.</li></ul>
+
+
+
+<script>
+function changeImage(){
+var image = document.getElementById('myImage');
+if (image.src.match("bulbon")){ 
+	image.src = "http://pages.iu.edu/~mfritzha/i101/images/bulboff.png";
+ } else {
+	image.src = "http://pages.iu.edu/~mfritzha/i101/images/bulbon.png";
+	}
+}
+
+function changeImageBlue(){
+var image2 = document.getElementById('myImageBlue');
+if (image2.src.match("bulbblue")){ 
+	image2.src = "http://pages.iu.edu/~mfritzha/i101/images/bulboff.png";
+ } else {
+	image2.src = "http://pages.iu.edu/~mfritzha/i101/images/bulbblue.png";
+	}
+}
+
+function checkNumber(){
+var x, text;
+x = document.getElementById("num").value;
+if(isNan(x) || x < 1 || x > 10) {
+	text = "Input not valid";
+}
+else{
+	text = "Input Accepted";
+	changeImage();
+}
+document.getElementById("script1").innerHTML = text;
+}
+
+ 
+</script>
+
+
+</body>
+</html>

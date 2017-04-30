@@ -1,0 +1,57 @@
+table {
+	border-width: thin;
+	border-color: black;
+	border-style: solid;
+}
+
+.tablehead {
+	background-color: black;
+	color: white;
+	
+}
+
+.tableRED{
+	background-color: red;
+	color: black;
+}
+
+.schoolyay{
+ background-color:yellow;
+ color:black;
+ font: arial;
+}
+.workyay{
+background-color:blue;
+color:black;
+font: arial;
+}
+
+.restyay{
+background-color:red
+color:black
+font: arial;
+}
+
+.studyyay{
+background-color:green 
+color: blue
+font: arial;
+}
+
+.lunchyay{
+background-color: black
+color: white
+font-weight: bold
+}
+
+.napyay{
+background-color: green
+color: black
+font-weight: bold
+font: arial;
+}
+.dinneryay{
+background: purple
+color: red
+font-weight: bold
+}
